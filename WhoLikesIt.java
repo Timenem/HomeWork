@@ -1,0 +1,16 @@
+class WhoLikesIt {
+    public static String whoLikesIt(String... names) {
+        if (names.length == 0) {
+            return "no one likes this";
+        } else if (names.length == 1) {
+            return String.format("%s likes this", names[0]);
+        } else if (names.length == 2) {
+            return String.format("%s and %s likes this", names[0], names[1]);
+        } else if (names.length == 3) {
+            return String.format("%s, %s and %s like this", names[0], names[1], names[2]);
+        } else {
+            Integer others = names.length - 2;
+            return String.format("%s, %s and %d others like this", names[0], names[1], others);
+        }
+    }
+}
